@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Cliente>
+
+@{
+    ViewData["Title"] = "ElencoClienti";
+}
+
+<h1> ELENCO CLIENTI</h1>
+<hr />
+<a asp-controller="Negozio" asp-action="NuovoCliente"> INSERISCI UN NUOVO CLIENTE </a>
+<br />
+
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>ID CLIENTE: </th>
+        <th>NOME: </th>
+        <th>COGNOME: </th>
+    </tr>
+
+ @foreach(var item in Model)
+    {
+      <tr>
+            <td>@item.IdCliente</td>
+            <td>@item.Nome </td>
+            <td>@item.Cognome </td>
+           
+            <td> <a  asp-action="ModificaCliente" asp-route-id="@item.IdCliente"> ModificaCliente </a></td>
+        </tr>
+
+    }
+
+</table>
+

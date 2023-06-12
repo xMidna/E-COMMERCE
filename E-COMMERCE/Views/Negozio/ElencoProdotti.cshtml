@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Prodotto>
+@{
+    ViewData["Title"] = "ElencoProdotti";
+}
+
+<h1>ElencoProdotti</h1>
+<hr />
+
+<a asp-controller="Negozio" asp-action="NuovoProdotto"> INSERISCI UN NUOVO PRODOTTO </a>
+<br />
+<a asp-controller="Negozio" asp-action="ModificaProdotto"> MODIFICA UN PRODOTTO </a>
+<br />
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>ID PRODOTTO: </th>
+        <th>NOME: </th>
+        <th>PREZZO: </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.IdProdotto</td>
+            <td>@item.Nome </td>
+            <td>@item.Prezzo </td>
+            <td> <a  asp-action="NuovoProdotto" asp-route-id="@item.IdProdotto"> NuovoCliente </a></td>
+            <td> <a  asp-action="ModificaProdotto" asp-route-id="@item.IdProdotto"> ModificaCliente </a></td>
+        </tr>
+
+    }
+
+</table>
+

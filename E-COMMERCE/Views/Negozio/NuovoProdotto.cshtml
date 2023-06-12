@@ -1,0 +1,51 @@
+﻿@model Prodotto
+@{
+    ViewData["Title"] = "NuovoProdotto";
+}
+
+<h1>Inserisci un nuovo Prodotto</h1>
+<hr />
+
+<form method="post">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                ID Prodotto:
+            </div>
+            <div class="col">
+                <input type="text" name="id" value=@Model.IdProdotto />
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                Nome:
+            </div>
+            <div class="col">
+                <input type="text" name="nome" value=@Model.Nome />
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                Prezzo:
+            </div>
+            <div class="col">
+                <input type="text" name="cognome" value=@Model.Prezzo />
+            </div>
+        </div>
+    </div>
+   
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+
+            <div class="col">
+                <input type="submit" value="salva" />
+            </div>
+        </div>
+    </div>
+</form>

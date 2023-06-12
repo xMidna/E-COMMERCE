@@ -1,0 +1,49 @@
+﻿@model Cliente
+@{
+    ViewData["Title"] = "NuovoCliente";
+}
+
+<h1>Inserisci un Nuovo Cliente</h1>
+
+<form method="post">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                ID Cliente:
+            </div>
+            <div class="col">
+                <input type="text" name="id" value=@Model.IdCliente />
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                Nome:
+            </div>
+            <div class="col">
+                <input type="text" name="nome" value=@Model.Nome />
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                Cognome:
+            </div>
+            <div class="col">
+                <input type="text" name="cognome" value=@Model.Cognome />
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+
+            <div class="col">
+                <input type="submit" value="salva" />
+            </div>
+        </div>
+    </div>
+</form>

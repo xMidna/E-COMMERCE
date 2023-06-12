@@ -1,0 +1,48 @@
+﻿@model Prodotto
+@{
+    ViewData["Title"] = "ModificaProdotto";
+}
+
+<h1>ModificaProdotto</h1>
+
+<form method="post">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                ID Prodotto:
+            </div>
+            <div class="col">
+                <input type="text" name="id" value="@Model.IdProdotto" readonly required />
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                Nome:
+            </div>
+            <div class="col">
+                <input type="text" name="nome" value="@Model.Nome" />
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                Prezzo:
+            </div>
+            <div class="col">
+                <input type="text" name="cognome" value="@Model.Prezzo" />
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col">
+                <input type="submit" value="Salva" />
+            </div>
+        </div>
+    </div>
+</form>
